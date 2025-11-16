@@ -1,0 +1,136 @@
+/* General styling */
+body {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    height: 100vh;
+    background-color: #f4f6f8;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Skip link styling */
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 350px;
+    background: #484848;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    height: 100vh;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ede5e5;
+}
+
+/* Search box styling */
+#search-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ede5e5;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-box:focus {
+    border-color: #0078d7;
+}
+
+/* For search filtering */
+.hidden {
+    display: none;
+}
+
+/* Place styling */
+.place {
+    position: relative;
+    background: #ede5e5;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s all ease-in;
+    cursor: pointer;
+}
+
+#places-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.place:hover {
+    background: #dac9ff;
+}
+
+.place h2 {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #171616;
+}
+
+.place p {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Badge styling */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #ff3737;
+}
+
+/* Map icon styling */
+.leaflet-marker-icon svg {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Map styling */
+#map {
+    flex: 1;
+    height: 100vh;
+}
