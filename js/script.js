@@ -71,7 +71,7 @@ const searchBox = document.getElementById('search-box');
 searchBox.addEventListener('input', () => {
     const query = searchBox.value.toLowerCase();
     document.querySelectorAll('.place').forEach(item => {
-        const name = item.querySelector('h3').textContent.toLowerCase();
+        const name = item.querySelector('h2').textContent.toLowerCase();
         const match = name.includes(query);
         item.classList.toggle('hidden', !match);
 
@@ -90,3 +90,4 @@ searchBox.addEventListener('input', () => {
     });
 
 });
+
