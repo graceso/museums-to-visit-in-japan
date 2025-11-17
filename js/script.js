@@ -33,7 +33,8 @@ let places = [
     { name: "the national museum of art, osaka", coords: [34.6918, 135.4920], link: "https://www.nmao.go.jp/en/" },
     { name: "chichu art museum", coords: [34.4477, 133.9847], link: "https://benesse-artsite.jp/en/art/chichu.html", wantToGo: true },
     { name: "21st century museum of contemporary art", coords: [36.5613, 136.66], link: "https://www.kanazawa21.jp/en/" },
-    { name: "hokkaido museum of modern art", coords: [43.0603, 141.3303], link: "https://artmuseum.pref.hokkaido.lg.jp/knb/english" }
+    { name: "hokkaido museum of modern art", coords: [43.0603, 141.3303], link: "https://artmuseum.pref.hokkaido.lg.jp/knb/english" },
+    { name: "teamlab borderless: mori building digital art museum", coords: [35.6645, 139.7400], link: "https://www.teamlab.art/e/tokyo/" }
 ];
 
 places.sort((a, b) => (b.wantToGo ? 1 : 0) - (a.wantToGo ? 1 : 0));
@@ -87,4 +88,5 @@ searchBox.addEventListener('input', () => {
             }
         }
     });
+
 });
